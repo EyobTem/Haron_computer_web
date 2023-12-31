@@ -7,7 +7,7 @@
     <link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
-    <form id="myForm">
+    <form id="loginForm">
         <div class="container-xxl position-relative bg-white d-flex p-0">
             <div class="container-fluid">
                 <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
@@ -37,7 +37,7 @@
             </div>
     </form>
     <script>
-        document.getElementById('myForm').addEventListener('submit', function (event) {
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
             event.preventDefault();
             const formData = new FormData(this);
             fetch('/api/submit-form', {
