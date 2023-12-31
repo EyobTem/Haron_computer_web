@@ -3,16 +3,15 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Send request to connect</title>
+    <title>Login Page</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container-xxl position-relative bg-white d-flex p-0">
-        
-        <div class="container-fluid">
-            <form id="myForm">
+    <form id="loginForm">
+        <div class="container-xxl position-relative bg-white d-flex p-0">
+            <div class="container-fluid">
                 <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
                     <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
                         <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
@@ -20,52 +19,64 @@
                                 <a href="index.html" class="">
                                     <h5 class="text-primary">Back to Home</h5>
                                 </a>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingText" placeholder="customerName"
-                                    required>
-                                <label for="floatingText">Customer Name</label>
+                                <h5>Sign In Here</h5>
                             </div>
                             <div class="form-floating mb-3">
                                 <input type="email" class="form-control" id="floatingInput" placeholder="Email"
-                                    required>
+                                    name="email" required>
                                 <label for="floatingInput">Email address</label>
                             </div>
                             <div class="form-floating mb-4">
-                                <input type="password" class="form-control" id="floatingPassword"
-                                    placeholder="Password">
+                                <input type="password" class="form-control" id="floatingPassword" name="password"
+                                    placeholder="Password" required>
                                 <label for="floatingPassword">Password</label>
                             </div>
-                            <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Submit Connection
-                                Request</button>
+                            <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign In</button>
+                            <p class="text-center mb-0">Don't have an Account? <a href="signup.html">Sign Up</a></p>
                         </div>
                     </div>
                 </div>
-            </form>
-            <script>
-                document.getElementById('myForm').addEventListener('submit', function (event) {
-                    event.preventDefault();
+            </div>
+    </form>
+    <script>
 
-                    const formData = new FormData(this);
-                    fetch('/api/submit-form', {
-                        method: 'POST',
-                        body: formData
-                    })
-                        .then(response => {
-                            if (!response.ok) {
-                                throw new Error('Error in Submitting the Request');
-                            }
-                            return response.json();
-                        })
-                        .then(data => {
-                            console.log('Request submitted successfully:', data);
-                        })
-                        .catch(error => {
-                            console.error('There was a problem with the request submission:', error);
-                        });
-                });
-            </script>
-        </div>
+
+
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            const user = {
+                email: formData.get('email'),
+                password: formData.get('password')
+            };
+            const { data } = fetch('http://localhost:8000/token/', {
+                method: 'POST',
+                body: JSON.stringify(user),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            const response = fetch('http://localhost:8000/users/', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(response => {
+                if (!response.ok) {
+                    throw new Error('Error in Submitting the Request');
+                }
+                return response.json();
+            }).then(data => {
+                const matchingUser = data.find(user => user.email === formData.get('email'));
+                if (matchingUser) {
+                    localStorage.setItem('user', JSON.stringify(matchingUser));
+                    window.location.href = 'requestForm.html';
+                } else {
+                    alert('Invalid Credentials');
+                }
+            });
+        });
+    </script>
     </div>
 </body>
 
