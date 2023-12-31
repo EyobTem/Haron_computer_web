@@ -62,10 +62,10 @@
                             return response.json();
                         })
                         .then(data => {
-                            console.log('Request submitted successfully:', data);
+                            alert('Request submitted successfully:', data);
                         })
                         .catch(error => {
-                            console.error('There was a problem with the request submission:', error);
+                            alert('There was a problem with the request submission:', error);
                         });
                 });
             </script>
