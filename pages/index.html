@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Haron Computers</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <div class="sidebar pe-4 pb-3">
+            <nav class="navbar bg-light navbar-light">
+                <a href="index.html" class="navbar-brand mx-4 mb-3">
+                    <h3 class="text-primary"></h4>Haron Computers</h4>
+                </a>
+                <div class="navbar-nav w-100">
+                    <a href="index.html" class="nav-item nav-link active"><i
+                            class="fa fa-tachometer-alt me-2"></i>Home</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
+                                class="fa fa-laptop me-2"></i>Integrations</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="requestForm.html" class="dropdown-item">Connect to SWIFT</a>
+                        </div>
+                    </div>
+                    <a href="#" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Services</a>
+                    <a href="#" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>About Us</a>
+                    <div class="nav-item dropdown">
+                    </div>
+            </nav>
+        </div>
+        <div class="content">
+            <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+                <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
+                </a>
+                <a href="#" class="sidebar-toggler flex-shrink-0">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <form class="d-none d-md-flex ms-4">
+                    <input class="form-control border-0" type="search" placeholder="Search">
+                </form>
+                <div class="navbar-nav align-items-center ms-auto">
+                    <a href="signup.html">Sign Up</a>
+                    <span style="margin-right: 10px;"></span>
+                    <a href="signin.html">Login</a>
+                </div>
+
+            </nav>
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+
+                    <div class="col-sm-12 col-xl-12">
+                        <div class="bg-light text-center rounded p-4">
+                            <div class="d-flex align-items-center justify-content-left">
+                                <h6 class="mb-0 text-start">
+                                    Haron computers technology is Largest market share of the distribution
+                                    and servicing of the latest laptops/ PCs in the country.
+                                    It is the Leading tech company, engaged in the diverse trading and servicing
+                                    activities of cash registers, computer hardware, faxes, photocopiers, scanners with
+                                    accessories, and computer networking systems in Ethiopia.
+                                </h6>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <img src="../img/haron-computer.png" alt="" style="width: 1100px; height: 100px;">
+                <img class="rounded-circle" src="../img/haron-computer-plc.jpg" alt=""
+                    style="width: 500px; height: 500px;justify-items: auto;">
+
+            </div>
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-light rounded-top p-4">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 text-center text-sm-start">
+                            &copy; <a href="index.html">Haron Computers</a>, All Rights Reserved. <span
+                                id="currentYear"></span>
+                        </div>
+
+                        <div class="col-12 col-sm-6 text-center text-sm-end">
+
+                            Powered By <a href="index.html">Haron Computers</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const currentYear = new Date().getFullYear();
+            document.getElementById('currentYear').textContent = currentYear;
+        });
+    </script>
+    <script src="../js/main.js"></script>
+
+
+</body>
+
+</html>
