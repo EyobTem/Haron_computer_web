@@ -72,7 +72,7 @@ o	How will user feedback be collected and incorporated into future improvements?
 - SQL: Database for storing onboarding requests and customer data
 
 ## Setting Up & Running the Project
-1. Clone the SWIFT-Connect-Service-web repository: `https://github.com/EyobTem/SWIFT-Connect-Service-web.git`
+1. Clone the SWIFT-Connect-Service-web repository: `https://github.com/EyobTemesgen/SWIFT-Connect-Service-web.git`
 2. Clone SWIFT-Connect-Service-API repository:
 3. Set up the Python environment and dependencies.
 4. Create and configure the SQL database.
