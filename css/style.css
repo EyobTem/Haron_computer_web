@@ -131,11 +131,15 @@
     outline: none;
 }
 
-.sidebar .navbar .navbar-nav .nav-link:hover,
+.sidebar .navbar .navbar-nav .nav-link:hover {
+    color: var(--primary); /* Change text color on hover */
+    background: #FFFFFF; /* Background color on hover (if needed) */
+    /* border-color: var(--primary); */ /* Uncomment this line if you want to change border color on hover */
+}
 .sidebar .navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
-    background: #FFFFFF;
-    border-color: var(--primary);
+    color: var(--primary); /* Active link text color */
+    /* background: #FFFFFF; */ /* Active link background color (if needed) */
+    /* border-color: var(--primary); */ /* Uncomment this line if you want to change border color for active link */
 }
 
 .sidebar .navbar .navbar-nav .nav-link i {
