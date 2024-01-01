@@ -3,58 +3,88 @@
 
 <head>
     <meta charset="utf-8">
-    <title>view connection Request</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-    </style>
+    <title>view request</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+        <div class="content">
+            <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+                <a href="../index.html" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
+                </a>
+                <a href="#" class="sidebar-toggler flex-shrink-0">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <form class="d-none d-md-flex ms-4">
+                    <input class="form-control border-0" type="search" placeholder="Search">
+                </form>
+            </nav>
+            <div class="container">
 
-        <div class="d-flex align-items-center justify-content-center">
-            <a href="../index.html" class="">
-                <h5 class="text-primary">Back to Home</h5>
-            </a>
-            <span style="margin-left: 700px;">
-                <h3>View Request</h3>
-            </span>
+                <div class="d-flex align-items-center justify-content-center">
+                    <a href="../index.html" class="">
+                        <h5 class="text-primary">Back to Home</h5>
+                    </a>
+                    <span style="margin-left: 700px;">
+                        <h5>View Request</h5>
+                    </span>
+                </div>
+
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Company Name</th>
+                            <th scope="col">Company Address</th>
+                            <th scope="col">Contact Phone</th>
+                            <th scope="col">Contact Email</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                    </tbody>
+                </table>
+            </div>
+            <script>
+                fetch('http://localhost:8000/swift/')
+                    .then(response => response.json())
+                    .then(data => {
+                        const tableBody = document.getElementById('table-body');
+                        data.forEach(item => {
+                            const row = document.createElement('tr');
+                            row.innerHTML = `
+                                <td>${item.companyName}</td>
+                                <td>${item.companyAddress}</td>
+                                <td>${item.contactPhone}</td>
+                                <td>${item.contactEmail}</td>
+                            `;
+                            tableBody.appendChild(row);
+                        });
+                    })
+                    .catch(error => {
+                        alert('Error fetching data:', error);
+                    });
+            </script>
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-light rounded-top p-4">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 text-center text-sm-start">
+                            &copy; <a href="index.html">Haron Computers</a>, All Rights Reserved. <span
+                                id="currentYear"></span>
+                        </div>
+
+                        <div class="col-12 col-sm-6 text-center text-sm-end">
+
+                            Powered By <a href="index.html">Haron Computers</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Company Name</th>
-                    <th scope="col">Company Address</th>
-                    <th scope="col">Contact Phone</th>
-                    <th scope="col">Contact Email</th>
-                </tr>
-            </thead>
-            <tbody id="table-body">
-            </tbody>
-        </table>
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
-
-    <script>
-        fetch('http://localhost:8000/swift/')
-            .then(response => response.json())
-            .then(data => {
-                const tableBody = document.getElementById('table-body');
-                data.forEach(item => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${item.companyName}</td>
-                        <td>${item.companyAddress}</td>
-                        <td>${item.contactPhone}</td>
-                        <td>${item.contactEmail}</td>
-                    `;
-                    tableBody.appendChild(row);
-                });
-            })
-            .catch(error => {
-                alert('Error fetching data:', error);
-            });
-    </script>
 </body>
 
 </html>
