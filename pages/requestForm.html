@@ -7,40 +7,55 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="container-xxl position-relative bg-white d-flex p-0">
         <div class="container-fluid">
             <form id="requestForm">
                 <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
-                    <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                    <div class="col-12 col-sm-8 col-md-6 col-lg-8 col-xl-6"> <!-- Adjusted width for LG and XL screens -->
                         <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
-                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                <a href="../index.html" class="">
-                                    <h5 class="text-primary">Back to Home</h5>
-                                </a>
-                                <h5 class="text-primary">Onboarding form</h5>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 mb-3">
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <h7>Onboarding Request Form</h7>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col text-center mt-3">
+                                                <a href="../index.html" class="">
+                                                    <h7 class="text-primary">Back to Home</h7>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingText" name="companyName"placeholder="customerName"
-                                    required>
+                                <input type="text" class="form-control" id="floatingText" name="companyName"
+                                    placeholder="customerName" required>
                                 <label for="floatingText">Company Name</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingText" name="companyAddress"placeholder="Customer Address"
-                                    required>
+                                <input type="text" class="form-control" id="floatingText" name="companyAddress"
+                                    placeholder="Customer Address" required>
                                 <label for="floatingText">Company Address</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingText" name="contactPhone"placeholder="Contact Phone"
-                                    required>
+                                <input type="text" class="form-control" id="floatingText" name="contactPhone"
+                                    placeholder="Contact Phone" required>
                                 <label for="floatingText">Contact Phone</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="contactEmail" class="form-control" id="floatingInput" placeholder="Contact Email"
-                                    required name="contactEmail">
+                                <input type="contactEmail" class="form-control" id="floatingInput"
+                                    placeholder="Contact Email" required name="contactEmail">
                                 <label for="floatingInput">Contact Email</label>
                             </div>
-                            <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Submit New Onboarding Request</button>
+                            <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Submit New Onboarding
+                                Request</button>
                         </div>
                     </div>
                 </div>
@@ -71,5 +86,6 @@
         </div>
     </div>
 </body>
+
 
 </html>

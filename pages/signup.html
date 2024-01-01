@@ -12,7 +12,7 @@
     <div class="container-xxl position-relative bg-white d-flex p-0">
         <div class="container-fluid">
             <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
-                <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                <div class="col-12 col-sm-8 col-md-6 col-lg-8 col-xl-6"> <!-- Adjusted width for myForm -->
                     <form id="myForm">
                         <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
                             <div class="d-flex align-items-center justify-content-between mb-3">
@@ -32,7 +32,7 @@
                                 <label for="floatingInput">Email address</label>
                             </div>
                             <div class="form-floating mb-4">
-                                <input type="password" class="form-control" name="password"id="floatingPassword" placeholder="Password"
+                                <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password"
                                     required>
                                 <label for="floatingPassword">Password</label>
                             </div>
@@ -43,7 +43,7 @@
                     <script>
                         document.getElementById('myForm').addEventListener('submit', function (event) {
                             event.preventDefault();
-        
+
                             const formData = new FormData(this);
                             fetch('http://localhost:8000/register/', {
                                 method: 'POST',
@@ -68,5 +68,6 @@
         </div>
     </div>
 </body>
+
 
 </html>
