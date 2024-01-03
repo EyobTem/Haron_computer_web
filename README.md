@@ -64,6 +64,7 @@ o	How will user feedback be collected and incorporated into future improvements?
 - User-friendly interfaces with intuitive design
 
 ### Wireframe - CRM Module Request Processing Screens
+ open the following link and play it to see the sample wireframe design
 https://www.figma.com/file/qmiRiKbfmkQnD0xqdKCnUg/SWIFT-Connect-Service?type=design&node-id=0%3A1&mode=design&t=JvLBMt9WB4xYb3yz-1
 
 ## Technology Stack
