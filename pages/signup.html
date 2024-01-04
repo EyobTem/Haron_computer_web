@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>Create Account</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
 </head>
@@ -16,10 +18,11 @@
                     <form id="myForm">
                         <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
                             <div class="d-flex align-items-center justify-content-between mb-3">
-                                <a href="index.html" class="">
-                                    <h5 class="text-primary">Back to Home</h5>
+                                <a href="index.html" class="text-decoration-none">
+
+                                    <i class="fas fa-arrow-left fa-2x"></i>
                                 </a>
-                                <h6>Sign Up Here</h6>
+                                <h5>Sign Up Here</h5>
                             </div>
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control" name="name" id="floatingText" placeholder="Username"
@@ -67,6 +70,27 @@
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const currentYear = new Date().getFullYear();
+            document.getElementById('currentYear').textContent = currentYear;
+        });
+    </script>
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-light rounded-top p-4">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 text-center text-sm-start">
+                            &copy; <a href="index.html">Haron Computers</a>, All Rights Reserved. <span
+                                id="currentYear"></span>
+                        </div>
+
+                        <div class="col-12 col-sm-6 text-center text-sm-end">
+
+                            Powered By <a href="index.html">Haron Computers</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 </body>
 
 

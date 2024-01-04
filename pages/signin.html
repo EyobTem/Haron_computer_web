@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Login Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
 </head>
@@ -15,12 +16,15 @@
                 <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
                     <div class="col-12 col-sm-8 col-md-6 col-lg-8 col-xl-6">
                         <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
+
                             <div class="d-flex align-items-center justify-content-between mb-3">
-                                <a href="index.html" class="">
-                                    <h5 class="text-primary">Back to Home</h5>
+                                <a href="index.html" class="text-decoration-none">
+
+                                    <i class="fas fa-arrow-left fa-2x"></i>
                                 </a>
                                 <h5>Sign In Here</h5>
                             </div>
+
                             <div class="form-floating mb-3">
                                 <input type="email" class="form-control" id="floatingInput" placeholder="Email"
                                     name="email" required>
@@ -75,6 +79,27 @@
             });
         });
     </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const currentYear = new Date().getFullYear();
+                document.getElementById('currentYear').textContent = currentYear;
+            });
+        </script>
+                <div class="container-fluid pt-4 px-4">
+                    <div class="bg-light rounded-top p-4">
+                        <div class="row">
+                            <div class="col-12 col-sm-6 text-center text-sm-start">
+                                &copy; <a href="index.html">Haron Computers</a>, All Rights Reserved. <span
+                                    id="currentYear"></span>
+                            </div>
+    
+                            <div class="col-12 col-sm-6 text-center text-sm-end">
+    
+                                Powered By <a href="index.html">Haron Computers</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 </body>
 
 
