@@ -86,6 +86,10 @@ https://www.figma.com/file/qmiRiKbfmkQnD0xqdKCnUg/SWIFT-Connect-Service?type=des
 
 ![image](https://github.com/EyobTemesgen/SWIFT-Connect-Service-web/assets/111111244/e3551fb3-2836-45fc-af5e-96996b7b5fbc)
 
+![image](https://github.com/EyobTemesgen/SWIFT-Connect-Service-web/assets/111111244/6c158bc4-1622-4374-aa71-453cbdf61326)
+
+![image](https://github.com/EyobTemesgen/SWIFT-Connect-Service-web/assets/111111244/3aaa4c24-710b-460d-8822-6dcd5b6c11a4)
+
 
 
 
