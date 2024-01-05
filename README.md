@@ -76,3 +76,18 @@ https://www.figma.com/file/qmiRiKbfmkQnD0xqdKCnUg/SWIFT-Connect-Service?type=des
 1. Clone the SWIFT-Connect-Service-web repository: `https://github.com/EyobTemesgen/SWIFT-Connect-Service-web.git`
 2. Start the index.html file of the front-end project to get the user interface
 3. Access the web interface and CRM module SWIFT Connectivity.
+   
+![image](https://github.com/EyobTemesgen/SWIFT-Connect-Service-web/assets/111111244/c638c60b-edcb-49d6-bf1d-3b68b0451ade)
+
+![image](https://github.com/EyobTemesgen/SWIFT-Connect-Service-web/assets/111111244/825108fc-d349-4de4-ab13-df1f2b2ef71f)
+
+
+![image](https://github.com/EyobTemesgen/SWIFT-Connect-Service-web/assets/111111244/f6ffe5b6-842f-42a5-a840-a8d3807e6f4b)
+
+![image](https://github.com/EyobTemesgen/SWIFT-Connect-Service-web/assets/111111244/e3551fb3-2836-45fc-af5e-96996b7b5fbc)
+
+
+
+
+
+
