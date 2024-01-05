@@ -1,4 +1,4 @@
-# SWIFT Connect Service Electronic Onboarding
+# SWIFT Connect Onboarding Service
 
 ## Overview
 Haron Computer is transitioning from manual onboarding processes to an electronic process for onboarding business customers onto their SWIFT Connect service. This README provides an overview of the requirements, design, technology stack, and instructions for setting up and running the project.
@@ -74,9 +74,5 @@ https://www.figma.com/file/qmiRiKbfmkQnD0xqdKCnUg/SWIFT-Connect-Service?type=des
 
 ## Setting Up & Running the Project
 1. Clone the SWIFT-Connect-Service-web repository: `https://github.com/EyobTemesgen/SWIFT-Connect-Service-web.git`
-2. Clone SWIFT-Connect-Service-API repository:
-3. Set up the Python environment and dependencies.
-4. Create and configure the SQL database.
-5. Run the necessary scripts to set up tables and initial data.
-6. Start the development server.
-7. Access the web interface and CRM module SWIFT Connectivity.
+2. Start the index.html file of the front-end project to get the user interface
+3. Access the web interface and CRM module SWIFT Connectivity.
